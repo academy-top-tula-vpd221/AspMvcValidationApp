@@ -1,0 +1,41 @@
+﻿@model Employee
+
+@using(Html.BeginForm("Employee", "Home", FormMethod.Post))
+{
+    <div>
+        @* @Html.Label("name", "Name:")
+        @Html.TextBox("name") *@
+        <label asp-for="Name">Name:</label>
+        <input type = "text" asp-for="Name"/>
+        <span asp-validation-for="Name"/>
+    </div>
+    <div>
+        @* @Html.Label("age", "Age:")
+        @Html.TextBox("age") *@
+        <label asp-for="Age">Age:</label>
+        <input type="number" asp-for="Age" />
+        <span asp-validation-for="Age" />
+    </div>
+    <div>
+        <label asp-for="Email">Email:</label>
+        <input type="email" asp-for="Email" />
+        <span asp-validation-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password">Password:</label>
+        <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password" />
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm">Password Confirm:</label>
+        <input type="password" asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm" />
+    </div>
+    <div>
+        <input type="submit" value="Send" />
+    </div>
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"></script>
